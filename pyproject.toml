@@ -24,6 +24,7 @@ tensorboard = "^2.19.0"
 umap-learn = "^0.5.7"
 plotly = "^6.2.0"
 sentence-transformers = "^5.1.0"
+keras = "^3.11.3"
 
 
 [build-system]
