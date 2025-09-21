@@ -79,13 +79,17 @@ This guide will help you set up a Python virtual environment for your project us
 
 4. **Restart VS Code** and select the Python interpreter from `.venv` for the best experience.
 
-5. **Test your environment**:
+5. **Test your torch environment**:
 
     ```bash
     poetry run python test_torch_env.py
     ```
     If this runs without errors, your environment is set up correctly.
+6. **Run the end-to-end check**
+   
+   Open and run the `test_env.ipynb` (Run All Cells)
 
+   Confirm that all cells finish without errors.
 ---
 
 You are now ready to use VS Code for development!
