@@ -16,7 +16,6 @@ Welcome to the course repository for STAT362! This repo is designed to support y
 
 ### 1. Fork and Set Up Your Repo
 - **Fork** this repository to your own GitHub account.
-- **Add the instructor and TA as collaborators** to your forked repo.
 - **Clone** your fork to your local machine.
 - **Sync regularly** with the upstream (instructor's) repo to get updates:
   ```sh
