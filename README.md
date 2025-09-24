@@ -6,9 +6,9 @@ Welcome to the course repository for STAT362! This repo is designed to support y
 
 ## 📁 Repository Structure
 
-- `homeworks/` — homework assignments
-- `quizzes/` — after-class quizzes
-- `*.md` files — Markdown setup and environment guides (for local laptops and GCP)
+- `instructor/` — Official course materials, homework assignments, and resources (provided by instructors).
+- `student/` — Your own work: homework solutions, project code, and notes. **All your submissions should go here.**
+- `.md` files — Setup and environment guides to help you get started on your laptop or on Google Cloud Platform (GCP).
 
 ---
 
