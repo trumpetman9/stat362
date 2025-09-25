@@ -6,7 +6,17 @@ This guide will help you set up a Python virtual environment for your project us
 
 ## 1. Install Poetry (One-Time Setup)
 
-### Official Installation Script
+### Official Installation 
+
+Before getting started, please note: when you open a new terminal, your command prompt may start with **`(base)`**.  
+
+This indicates that the **Conda base environment** is being automatically activated. If you previously installed Conda on your laptop, this auto-activation can cause conflicts with system or course-specific packages.  
+
+Since we will **not** be using Conda to manage the environment for this course, and to ensure proper isolation, please disable Conda’s automatic base activation permanently by running:  
+
+```bash
+conda config --set auto_activate_base false
+```
 
 #### For macOS/Linux:
 
@@ -64,28 +74,33 @@ This guide will help you set up a Python virtual environment for your project us
     ```
     > *If `git` is not installed, you may need to run `sudo apt install git` (Linux) or use Homebrew on macOS.*
 
-2. **Install project dependencies** (from the folder containing `pyproject.toml`):
+2. **Configure poetry to use `.venv` in project directionary** 
+
+    ```bash
+    poetry config virtualenvs.in-project true
+    ```   
+3. **Install project dependencies** (from the folder containing `pyproject.toml`):
 
     ```bash
     poetry install --no-root
     ```
 
-3. **Verify the Python interpreter**:
+4. **Verify the Python interpreter**:
 
     ```bash
     poetry run which python
     ```
     This should point to the `.venv` folder under your project root.
 
-4. **Restart VS Code** and select the Python interpreter from `.venv` for the best experience.
+5. **Restart VS Code** and select the Python interpreter from `.venv` for the best experience.
 
-5. **Test your torch environment**:
+6. **Test your torch environment**:
 
     ```bash
     poetry run python test_torch_env.py
     ```
     If this runs without errors, your environment is set up correctly.
-6. **Run the end-to-end check**
+7. **Run the end-to-end check**
    
    Open and run the `test_env.ipynb` (Run All Cells)
 
