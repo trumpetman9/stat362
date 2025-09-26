@@ -1,12 +1,18 @@
 import torch
 import scipy
 import numpy
-import gensim
+import pandas as pd
 
+import sys
+import platform
+
+print("numpy path:", numpy.__file__)
+print("Python Version:", sys.version)
+print("Platform:", platform.platform())
 print("PyTorch version:", torch.__version__)
 print("scipy version:", scipy.__version__)
 print("numpy version:", numpy.__version__)
-print("gensim version:", gensim.__version__)
+print("pandas version:", pd.__version__)
 
 if torch.cuda.is_available():
     print("PyTorch is using GPU:", torch.cuda.get_device_name(0))
