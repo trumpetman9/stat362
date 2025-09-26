@@ -6,7 +6,7 @@ This guide will help you set up a Python virtual environment for your project us
 
 ## 1. Install Poetry (One-Time Setup)
 
-### Official Installation 
+### Before You Start: Turn Off COnda's `(base)` Environment
 
 Before getting started, please note: when you open a new terminal, your command prompt may start with **`(base)`**.  
 
@@ -18,11 +18,13 @@ Since we will **not** be using Conda to manage the environment for this course, 
 conda config --set auto_activate_base false
 ```
 
-#### Install Python
+### Install Python
 
-Before installing Poetry, you need to have Python 3.12 or 3.13 installed on your system. This project requires these specific versions for compatibility.
+Poetry is a Python package manager, but it does not install Python itself. You must have Python installed on your system before using Poetry.
 
-##### For Windows:
+For this course, you will need Python 3.12 or 3.13 to ensure compatibility with the required packages. If you don't have either installed, please follw the instructions below to install it.
+
+#### For Windows:
 
 1. **Download Python from the official website:**
    - Visit [python.org/downloads](https://www.python.org/downloads/)
@@ -40,7 +42,7 @@ Before installing Poetry, you need to have Python 3.12 or 3.13 installed on your
    ```
    This should display Python 3.12.x or 3.13.x
 
-##### For macOS:
+#### For macOS:
 
 1. **Install Homebrew** (if not already installed):
    ```bash
@@ -96,34 +98,12 @@ Before installing Poetry, you need to have Python 3.12 or 3.13 installed on your
    If you're using an Intel Mac, you can continue with x86_64 Python, but note that you may need to use older PyTorch versions or CPU-only builds.
 
 
-##### For Linux (Ubuntu/Debian):
 
-1. **Update package list:**
-   ```bash
-   sudo apt update
-   ```
+### Install Poetry Globally
 
-2. **Install Python 3.12 or 3.13:**
-   ```bash
-   # For Python 3.12
-   sudo apt install python3.12 python3.12-venv python3.12-pip
-   
-   # OR for Python 3.13 (if available in your distribution)
-   sudo apt install python3.13 python3.13-venv python3.13-pip
-   ```
+**Important:** While you *can* use `pip install poetry` to install Poetry, this is **not recommended** because it will install Poetry into your current Python environment, which can cause dependency conflicts and version management issues.
 
-3. **Verify the installation:**
-   ```bash
-   python3.12 --version
-   # OR
-   python3.13 --version
-   ```
-
-> **Note:** If your system doesn't have Python 3.12/3.13 in the default repositories, you may need to add the deadsnakes PPA:
-> ```bash
-> sudo add-apt-repository ppa:deadsnakes/ppa
-> sudo apt update
-> ```
+Instead, please follow the official installation method below to install Poetry globally on your system, which keeps it isolated from your project dependencies:
 
 #### For macOS/Linux:
 
