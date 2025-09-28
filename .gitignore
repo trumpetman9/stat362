@@ -58,3 +58,8 @@ cdk.out/
 *.pth
 *.onnx
 *.npy
+
+# ---- Course solutions (do not commit) ----
+# Any notebook or HTML whose name ends with _solution
+*_solution.ipynb
+*_solution.html
